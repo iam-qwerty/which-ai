@@ -30,7 +30,7 @@ export const ToolCard = ({ tool }:{ tool: NewAITool }) => {
             </div>
           </div>
           {/* Pricing Badge */}
-          <div className="flex-shrink-0">
+          <div className="shrink-0">
             <PricingBadge model={tool.pricing as PricingModel} />
           </div>
         </div>
