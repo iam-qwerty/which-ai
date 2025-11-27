@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Signika } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
+import { Toaster } from "@/components/ui/sonner";
 
 const signika = Signika({
   subsets: ["latin"],
@@ -26,7 +27,8 @@ export default function RootLayout({
         className={`${signika.className} antialiased dark`}
       >
         <Header />
-        {children}
+        <main>{children}</main>
+        <Toaster />
       </body>
     </html>
   );

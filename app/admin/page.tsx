@@ -1,7 +1,6 @@
 'use server'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import AdminToolForm from "./components/admin-tool-form"
-// import PricingBadge from "@/components/pricing-badge"
 
 export default async function AdminPage() {
   return (
