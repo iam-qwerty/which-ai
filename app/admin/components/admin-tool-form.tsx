@@ -25,8 +25,8 @@ export default function AdminToolForm() {
       <FieldGroup className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <Input type="text" name="name" placeholder="Tool name" required />
         <Input type="text" name="slug" placeholder="slug (seo-friendly)" required />
-        <Input type="text" name="category" placeholder="category" required />
-        <Select name="pricing_model">
+        <Input type="text" name="category" placeholder="category" />
+        <Select name="pricing_model" required>
           <SelectTrigger>
             <SelectValue placeholder="Select pricing model" />
           </SelectTrigger>
@@ -43,7 +43,7 @@ export default function AdminToolForm() {
       </Field>
       {/* description */}
       <Field>
-        <Textarea name="description" placeholder="Tool description" required className="min-h-[120px]" />
+        <Textarea name="description" placeholder="Tool description" className="min-h-[120px]" />
       </Field>
       {/* tags */}
       <Field>
