@@ -12,7 +12,7 @@ import type { NewAITool, PricingModel } from "@/lib/types"
 import Link from "next/link"
 
 // Tool Card Component
-export const ToolCard = ({ tool }:{ tool: NewAITool }) => {
+export const ToolCard = ({ tool }: { tool: NewAITool }) => {
   return (
     <Card
       className="group relative overflow-hidden bg-card backdrop-blur-sm border-border/50 hover:border-accent/30 transition-all duration-500 hover:shadow-lg animate-fade-in"
@@ -42,20 +42,6 @@ export const ToolCard = ({ tool }:{ tool: NewAITool }) => {
           {tool.description}
         </CardDescription>
 
-        {/* Categories */}
-        {/* <div className="flex flex-wrap gap-2">
-          {tool.categories.slice(0, 3).map((category) => (
-            <Badge key={category} variant="outline" className="text-xs font-sans">
-              {taskCategories.find((c) => c.value === category)?.label}
-            </Badge>
-          ))}
-          {tool.categories.length > 3 && (
-            <Badge variant="outline" className="text-xs font-sans">
-              +{tool.categories.length - 3}
-            </Badge>
-          )}
-        </div> */}
-
         {/* Upvotes/Downvotes */}
         <div className="flex items-center gap-4 text-sm font-sans">
           <div className="flex items-center gap-1.5 text-muted-foreground hover:text-accent transition-colors">
@@ -76,10 +62,10 @@ export const ToolCard = ({ tool }:{ tool: NewAITool }) => {
             className="flex-1 border-border/50 hover:border-accent/50 hover:bg-accent/5 transition-all duration-200 bg-transparent"
             asChild
           >
-            <a href={`/tool/${tool.id}`}>
+            <Link href={`/tool/${tool.id}`}>
               <Eye className="w-4 h-4 mr-1" />
               Details
-            </a>
+            </Link>
           </Button>
           <Button
             size="sm"

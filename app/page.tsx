@@ -1,9 +1,11 @@
 import SearchBar from "@/components/search-bar";
 import { ToolCard } from "@/components/tool-card";
 import { fetchTools } from "./actions";
+import { semanticSearch } from "@/lib/ai/semantic-search";
 
-export default async function Home() {
-  const tools = await fetchTools() ?? [];
+export default async function Home({ searchParams }: { searchParams: Promise<{ query?: string }> }) {
+  const query = (await searchParams).query;
+  const tools = query ? await semanticSearch(query) : await fetchTools() ?? [];
 
   return (
     <div className="min-h-screen">
@@ -30,6 +32,9 @@ export default async function Home() {
                 <ToolCard tool={tool} />
               </div>
             ))}
+            {tools.length === 0 && (
+              <div className="col-span-full text-center text-muted-foreground py-12">No tools found.</div>
+            )}
           </div>
         </div>
       </section>
