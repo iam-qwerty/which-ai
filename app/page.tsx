@@ -13,14 +13,13 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ q
         <div className="absolute inset-0 texture-overlay opacity-20" />
         <div className="container mx-auto text-center max-w-4xl relative z-10 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-black text-foreground mb-4 animate-slide-up">
-            Unlock the Power of AI
+            Find the right AI tool for specific tasks
           </h2>
           <p
             className="text-lg md:text-xl text-muted-foreground mb-8 font-sans leading-relaxed animate-slide-up"
             style={{ animationDelay: "0.1s" }}
           >
-            Discover tools tailored for your needs. Explore, compare, and choose the right AI solutions for your
-            projects.
+            Discover tools tailored for your needs. Explore and choose the right AI solutions for your tasks.
           </p>
 
           <SearchBar />
