@@ -10,6 +10,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import PricingBadge from "./pricing-badge"
 import type { NewAITool, PricingModel } from "@/lib/types"
 import Link from "next/link"
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
 
 // Tool Card Component
 export const ToolCard = ({ tool }: { tool: NewAITool }) => {
@@ -44,14 +45,28 @@ export const ToolCard = ({ tool }: { tool: NewAITool }) => {
 
         {/* Upvotes/Downvotes */}
         <div className="flex items-center gap-4 text-sm font-sans">
-          <div className="flex items-center gap-1.5 text-muted-foreground hover:text-accent transition-colors">
-            <ThumbsUp className="w-4 h-4" />
-            <span className="font-medium">{tool.upvotes}</span>
-          </div>
-          <div className="flex items-center gap-1.5 text-muted-foreground hover:text-destructive transition-colors">
-            <ThumbsDown className="w-4 h-4" />
-            <span className="font-medium">{tool.downvotes}</span>
-          </div>
+          <Tooltip>
+            <TooltipTrigger>
+              <div className="flex items-center gap-1.5 text-muted-foreground hover:text-accent transition-colors">
+                <ThumbsUp className="w-4 h-4" />
+                <span className="font-medium">{tool.upvotes}</span>
+              </div>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Coming soon</p>
+            </TooltipContent>
+          </Tooltip>
+          <Tooltip>
+            <TooltipTrigger>
+              <div className="flex items-center gap-1.5 text-muted-foreground hover:text-accent transition-colors">
+                <ThumbsDown className="w-4 h-4" />
+                <span className="font-medium">{tool.downvotes}</span>
+              </div>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Coming soon</p>
+            </TooltipContent>
+          </Tooltip>
         </div>
 
         {/* Buttons */}
