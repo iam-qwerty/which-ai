@@ -13,13 +13,15 @@ const signika = Signika({
 
 export const metadata: Metadata = {
   title: "Which AI",
-  description: "Find the best AI tools for your needs.",
+  description: "Find the best AI tool for specific tasks",
 };
 
 export default function RootLayout({
   children,
+  modal,
 }: Readonly<{
   children: React.ReactNode;
+  modal: React.ReactNode;
 }>) {
   return (
     <html lang="en">
@@ -28,6 +30,7 @@ export default function RootLayout({
       >
         <Header />
         <main>{children}</main>
+        {modal}
         <Toaster />
       </body>
     </html>
