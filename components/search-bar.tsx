@@ -29,7 +29,7 @@ export default function SearchBar() {
         value={query}
         onChange={(e) => setQuery(e.currentTarget.value)}
         onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
-        placeholder="Search AI tools by task, category, or name..."
+        placeholder="Type in what you want to do.."
         className="pl-12 py-6 text-lg border-border/50 focus:border-accent focus:ring-accent/20 bg-card backdrop-blur-sm font-sans transition-all duration-200 shadow-sm"
       />
       <Button
