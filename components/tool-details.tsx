@@ -1,10 +1,10 @@
-import { AITool, PricingModel } from "@/lib/types";
+import { NewAITool, PricingModel } from "@/lib/types";
 import { ExternalLinkIcon, ThumbsDown, ThumbsUp } from "lucide-react";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import PricingBadge from "./pricing-badge";
 
-export function ToolDetails({ tool }: { tool: AITool }) {
+export function ToolDetails({ tool }: { tool: NewAITool }) {
     return (
         <div className="space-y-6">
             <div className="space-y-2">
