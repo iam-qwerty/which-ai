@@ -24,6 +24,7 @@
   --color-ring: var(--ring);
   --color-input: var(--input);
   --color-border: var(--border);
+  --color-success: var(--success);
   --color-destructive: var(--destructive);
   --color-accent-foreground: var(--accent-foreground);
   --color-accent: var(--accent);
@@ -84,6 +85,7 @@
   --muted-foreground: oklch(0.6334 0 0);
   --accent: oklch(1.0000 0 0);
   --accent-foreground: oklch(0.2264 0 0);
+  --success: oklch(0.72 0.18 145);
   --destructive: oklch(0.6162 0.2506 26.2396);
   --border: oklch(1.0000 0 0);
   --input: oklch(1.0000 0 0);
@@ -139,6 +141,7 @@
   --muted-foreground: oklch(0.8109 0 0);
   --accent: oklch(0.4202 0 0);
   --accent-foreground: oklch(1.0000 0 0);
+  --success: oklch(0.72 0.18 145);
   --destructive: oklch(0.6162 0.2506 26.2396);
   --border: oklch(0.3052 0 0);
   --input: oklch(0.3639 0 0);
@@ -183,6 +186,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
     letter-spacing: var(--tracking-normal);
