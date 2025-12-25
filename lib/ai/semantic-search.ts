@@ -2,7 +2,7 @@
 
 import type { AITool } from "@/lib/types"
 import { getEmbedding } from "@/lib/ai/embedding"
-import { supabase } from "@/lib/client"
+import { supabase } from "@/lib/supabase/client"
 
 export async function semanticSearch(query: string) {
     const queryEmbedding = await getEmbedding(query);

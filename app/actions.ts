@@ -1,5 +1,5 @@
 "use server"
-import { supabase } from "@/lib/client"
+import { supabase } from "@/lib/supabase/client"
 
 const columnsToBeFetched = "id, name, description, tool_url, pricing, upvotes, downvotes, slug, category, featured"
 

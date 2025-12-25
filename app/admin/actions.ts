@@ -1,7 +1,7 @@
 "use server"
-import { supabase } from "@/lib/client"
+import { supabase } from "@/lib/supabase/client"
 
-export async function insertToolAction(_prevState: {success: boolean, message: string} | null, formData: FormData) {
+export async function insertToolAction(_prevState: { success: boolean, message: string } | null, formData: FormData) {
     // parse tags
     const rawTags = formData.get("tags") as string | null;
     const tags = rawTags ? rawTags.split(",").map((tag: string) => tag.trim()) : [];
