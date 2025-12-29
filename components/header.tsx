@@ -7,7 +7,7 @@ export default function Header() {
             <div className="container mx-auto px-4 py-4">
                 <div className="flex items-center justify-between">
                     <div>
-                        <h1 className="text-2xl font-black text-primary">AI Hub</h1>
+                        <h1 className="text-2xl font-black text-primary">Which AI</h1>
                         <p className="text-sm text-muted-foreground font-sans">Discover the perfect AI tools for your needs</p>
                     </div>
                 </div>

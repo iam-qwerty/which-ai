@@ -30,7 +30,7 @@ export default function SearchBar() {
         onChange={(e) => setQuery(e.currentTarget.value)}
         onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
         placeholder="Type in what you want to do.."
-        className="pl-12 py-6 text-lg border-border/50 focus:border-accent focus:ring-accent/20 bg-card backdrop-blur-sm font-sans transition-all duration-200 shadow-sm"
+        className="pl-12 py-6 text-sm md:text-lg border-border/50 focus:border-accent focus:ring-accent/20 bg-card backdrop-blur-sm font-sans transition-all duration-200 shadow-sm"
       />
       <Button
         className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-primary hover:bg-primary/90 text-primary-foreground shadow-md hover:shadow-lg transition-all duration-200"

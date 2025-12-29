@@ -45,7 +45,7 @@ export async function getEmbedding(text: string) {
 
 // backfill tool embeddings for newly added tools
 
-// import { supabase } from "../client";
+// import { supabase } from "../supabase/client";
 
 // export async function backFillToolEmbeddings() {
 //     const { data: tools, error } = await supabase
@@ -78,6 +78,9 @@ export async function getEmbedding(text: string) {
 
 
 // A better approach to what's above:
+
+// fetch the server client
+// import { supabase } from "@/assets/server-client";
 
 // export async function backFillToolEmbeddings() {
 //     const { data: tools, error } = await supabase
