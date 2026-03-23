@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 import { Redis } from '@upstash/redis'
-import { Ratelimit } from '@upstash/ratelimit'
+import { Ratelimit } from '@upstash/ratelimit/'
 
 // Initialize Redis and Ratelimit
 // We use a try-catch or conditional initialization to prevent build errors if env vars are missing during build/dev
